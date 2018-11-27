@@ -82,7 +82,7 @@ resource "azurerm_virtual_machine" "main" {
     location              = "${var.location}"
     resource_group_name   = "${var.resource_group}"
     network_interface_ids = ["${element(azurerm_network_interface.nic.*.id, count.index)}"]
-    vm_size               = "Standard_DS1_v2"
+    vm_size               = "Standard_D3_v2"
 
   # Uncomment this line to delete the OS disk automatically when deleting the VM
   # delete_os_disk_on_termination = true
